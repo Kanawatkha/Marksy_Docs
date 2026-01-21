@@ -1,0 +1,139 @@
+/* =========================================
+   1. Global Settings & Typography
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Sarabun:wght@300;400;500&display=swap');
+
+:root {
+    --primary-main: #2e7d32;
+    /* เขียว Marksy หลัก */
+    --primary-light: #4caf50;
+    /* เขียวสว่าง */
+    --primary-dark: #1b5e20;
+    /* เขียวเข้ม */
+    --text-dark: #2c3e50;
+    --text-light: #6c757d;
+    --bg-light: #f8f9fa;
+    --shadow-nav: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    color: var(--text-dark);
+    background-color: #fff;
+    overflow-x: hidden;
+    /* ป้องกัน scroll แนวนอน */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-heading {
+    font-family: 'Kanit', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================================
+   2. Navbar & Hamburger Menu
+   ========================================= */
+.navbar-custom {
+    background: #fff;
+    box-shadow: var(--shadow-nav);
+    padding: 12px 0;
+    transition: all 0.3s ease;
+}
+
+.brand-logo {
+    height: 45px;
+    /* ปรับขนาดโลโก้ให้พอดี */
+    width: auto;
+}
+
+.nav-link-custom {
+    color: var(--text-dark);
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+    color: var(--primary-main);
+}
+
+/* เอฟเฟกต์ขีดเส้นใต้เวลา Hover */
+.nav-link-custom::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-main);
+    transition: width 0.3s;
+}
+
+.nav-link-custom:hover::after,
+.nav-link-custom.active::after {
+    width: 100%;
+}
+
+/* ปุ่ม Hamburger สำหรับมือถือ */
+.navbar-toggler {
+    border: none;
+    outline: none;
+    box-shadow: none !important;
+}
+
+/* =========================================
+   3. Floating CTA Button (ปุ่มทดลองเล่น)
+   ========================================= */
+.floating-cta {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, var(--primary-main), var(--primary-light));
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4);
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    z-index: 1000;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.floating-cta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.5);
+    color: white;
+}
+
+/* Pulse Animation เพื่อดึงดูดสายตา */
+@keyframes pulse-green {
+    0% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+    }
+}
+
+.floating-cta {
+    animation: pulse-green 2s infinite;
+}

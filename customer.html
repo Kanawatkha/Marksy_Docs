@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คู่มือสำหรับลูกค้า - Marksy</title>
+    <link rel="icon" href="assets/img/Logo_Marksy.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/map-complex.css">
+
+    <style>
+        /* CSS พิเศษสำหรับหน้า Customer เพื่อเน้น Facilities */
+        .highlight-pulse {
+            animation: pulse-border 2s infinite;
+            border: 2px solid var(--primary-main) !important;
+        }
+
+        @keyframes pulse-border {
+            0% {
+                box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(46, 125, 50, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(46, 125, 50, 0);
+            }
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/Logo_Marksy.png" alt="Marksy Logo" class="brand-logo"
+                    onerror="this.src='https://placehold.co/150x50/2e7d32/white?text=Marksy'">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="text-success"><i class="fa-solid fa-bars fa-lg"></i></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="vendor.html">คู่มือร้านค้า</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="owner.html">คู่มือเจ้าของ</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom active"
+                            href="customer.html">คู่มือลูกค้า</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">เกี่ยวกับเรา</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-light text-center py-5 mb-5 border-bottom">
+        <div class="container">
+            <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">
+                <i class="fa-solid fa-compass me-1"></i> Visitor Guide
+            </span>
+            <h1 class="font-heading fw-bold text-dark">เดินตลาดแบบโปร ไม่ต้องวนหาที่จอด</h1>
+            <p class="lead text-muted">เช็คแผนที่ ส่องร้านดัง และดูสถานะลานจอดรถได้ก่อนออกจากบ้าน</p>
+        </div>
+    </header>
+
+    <div class="container mb-5">
+
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-5">
+                <div class="d-flex mb-3">
+                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                        style="width:40px; height:40px;">1</div>
+                    <h4 class="font-heading pt-1">เช็คจุดบริการและที่จอดรถ</h4>
+                </div>
+                <p class="text-muted">
+                    ในแผนที่ Marksy คุณสามารถกดดูจุดสำคัญต่างๆ ได้ทันที
+                    ไม่ว่าจะเป็น <strong class="text-primary">ลานจอดรถ</strong>,
+                    <strong class="text-info">จุดประชาสัมพันธ์ (CA Zone)</strong>
+                    หรือแม้แต่ห้องน้ำ เพื่อวางแผนการเดินให้สะดวกที่สุด
+                </p>
+                <div class="alert alert-info border-0 shadow-sm mt-3">
+                    <i class="fa-solid fa-lightbulb me-2"></i>
+                    <strong>Tip:</strong> ลองกดที่ "ลานจอดรถ" ในแผนที่ด้านล่าง เพื่อเช็คจำนวนที่ว่างแบบ Real-time
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                    <div
+                        class="card-header bg-primary text-white d-flex justify-content-between align-items-center py-3">
+                        <span><i class="fa-solid fa-location-dot me-2"></i> แผนที่สำหรับผู้มาเยือน</span>
+                        <span class="badge bg-light text-primary">Interactive Mode</span>
+                    </div>
+                    <div class="card-body bg-light p-4 overflow-auto">
+
+                        <div class="market-map-wrapper">
+                            <div class="map-road">ถ.นนทบุรี (สนามบินน้ำ) - ทางเข้าหลัก</div>
+                            <div class="market-layout">
+
+                                <div class="top-area">
+                                    <div class="block-a29" style="background-color: #5d4037;">โกดัง</div>
+                                    <div class="tonsak-1 cursor-pointer"
+                                        onclick="alert('ลานต้นสัก 1:\nพื้นที่จัดกิจกรรมดนตรีสดและลานเบียร์\nเปิด 18:00 - 23:00 น.')">
+                                        <i class="fa-solid fa-music me-2"></i> ลานกิจกรรม
+                                    </div>
+                                </div>
+
+                                <div class="left-column">
+                                    <div class="zone-a" style="background-color: #a1887f;">A-01</div>
+                                    <div class="zone-a" style="background-color: #a1887f;">A-02</div>
+                                    <div class="zone-a" style="background-color: #a1887f;">A-03</div>
+                                    <div class="zone-a" style="background-color: #a1887f;">A-04</div>
+                                    <div class="zone-a" style="background-color: #a1887f;">A-05</div>
+                                </div>
+
+                                <div class="center-column">
+                                    <div class="grid-zone-b">
+                                        <div class="zone-label" style="background-color: #f8bbd0; color: #c2185b;">
+                                            โซนแฟชั่น (เสื้อผ้า/กระเป๋า)</div>
+                                        <div class="zone-b" style="background-color: #ec407a; opacity: 0.8;"></div>
+                                        <div class="zone-b" style="background-color: #ec407a; opacity: 0.8;"></div>
+                                        <div class="zone-b" style="background-color: #ec407a; opacity: 0.8;"></div>
+                                        <div class="zone-b" style="background-color: #ec407a; opacity: 0.8;"></div>
+                                        <div class="zone-b" style="background-color: #ec407a; opacity: 0.8;"></div>
+                                        <div class="zone-b" style="background-color: #ec407a; opacity: 0.8;"></div>
+                                        <div class="zone-b" style="background-color: #ec407a; opacity: 0.8;"></div>
+                                        <div class="zone-b" style="background-color: #ec407a; opacity: 0.8;"></div>
+                                        <div class="zone-b" style="background-color: #ec407a; opacity: 0.8;"></div>
+                                        <div class="zone-b" style="background-color: #ec407a; opacity: 0.8;"></div>
+                                        <div class="zone-b" style="background-color: #ec407a; opacity: 0.8;"></div>
+                                        <div class="zone-b" style="background-color: #ec407a; opacity: 0.8;"></div>
+                                    </div>
+
+                                    <div class="grid-zone-m">
+                                        <div class="zone-m-label" style="background-color: #c8e6c9; color: #2e7d32;">
+                                            โซนอาหาร (Street Food)</div>
+                                        <div class="zone-m"
+                                            style="background-color: #66bb6a; grid-column: 1/-1; text-align:center; padding:20px;">
+                                            <i class="fa-solid fa-utensils fa-2x mb-2 text-white"></i><br>
+                                            ศูนย์รวมความอร่อยกว่า 50 ร้าน
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="right-column">
+                                    <div class="block-a24 bg-dark">
+                                        <i class="fa-solid fa-restroom fa-2x"></i>
+                                    </div>
+                                    <div class="zone-g bg-danger cursor-pointer"
+                                        onclick="alert('G-ZONE:\nจุดทิ้งขยะแยกประเภท\nกรุณาช่วยกันรักษาความสะอาดครับ')">
+                                        <i class="fa-solid fa-trash-can me-1"></i> จุดทิ้งขยะ
+                                    </div>
+                                </div>
+
+                                <div class="bottom-row">
+                                    <div class="zone-a" style="background-color: #a1887f; flex: 2;">ทางเดินหลัก</div>
+                                    <div class="zone-a bg-dark text-white" style="flex: 1;"
+                                        data-tooltip="ห้องน้ำหญิง/ชาย"><i class="fa-solid fa-restroom"></i></div>
+                                </div>
+                            </div>
+
+                            <div class="facilities-layer mt-3">
+                                <div class="ca-zone cursor-pointer highlight-pulse" onclick="checkInfo()"
+                                    data-tooltip="คลิกเพื่อติดต่อเจ้าหน้าที่">
+                                    <h4 class="mb-0">CA</h4>
+                                    <small>Info</small>
+                                </div>
+                                <div class="parking-lot cursor-pointer highlight-pulse" onclick="checkParking()">
+                                    <div class="text-center w-100">
+                                        <i class="fa-solid fa-square-parking fa-2x text-primary mb-1"></i><br>
+                                        <span class="fw-bold text-dark">คลิกเช็คสถานะที่จอดรถ</span>
+                                    </div>
+                                </div>
+                                <div class="office-zone">
+                                    <i class="fa-solid fa-building-user fa-2x mb-1"></i><br>
+                                    Office
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white py-2 text-center small text-muted">
+                        *ข้อมูลสถานะที่จอดรถอัปเดตทุก 5 นาที
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="p-4 border rounded-4 bg-white shadow-sm text-center">
+                    <i class="fa-solid fa-store fa-4x text-warning mb-3"></i>
+                    <h5 class="fw-bold">ค้นหาร้านค้า (Coming Soon)</h5>
+                    <p class="text-muted small">
+                        ในเวอร์ชันถัดไป ลูกค้าจะสามารถพิมพ์ชื่อเมนู (เช่น "หมูกระทะ")
+                        แล้วระบบจะนำทางไปยังล็อกร้านค้านั้นๆ บนแผนที่ได้ทันที
+                    </p>
+                    <button class="btn btn-sm btn-outline-warning rounded-pill" disabled>กำลังพัฒนา...</button>
+                </div>
+            </div>
+            <div class="col-lg-6 ps-lg-5 mt-4 mt-lg-0">
+                <div class="d-flex mb-3">
+                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                        style="width:40px; height:40px;">2</div>
+                    <h4 class="font-heading pt-1">ระบบนำทางอัจฉริยะ</h4>
+                </div>
+                <p class="text-muted">
+                    Marksy ไม่ได้ช่วยแค่การจอง แต่เราต้องการสร้างประสบการณ์การเดินตลาดที่ดีที่สุด
+                    ช่วยให้คุณประหยัดเวลาในการเดินหาร้านโปรด และลดความแออัดในพื้นที่
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="bg-light py-4 mt-5 border-top text-center">
+        <div class="container">
+            <p class="mb-0 text-muted small">© 2026 Marksy Project.</p>
+        </div>
+    </footer>
+
+    <a href="../marksy-prototype/index.html" target="_blank" class="floating-cta">
+        <i class="fa-solid fa-mobile-screen-button"></i>
+        <span>ทดลองเล่น Prototype</span>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        function checkParking() {
+            // จำลองการสุ่มตัวเลขที่จอดรถ
+            const total = 100;
+            const available = Math.floor(Math.random() * 20) + 5; // สุ่มเลข 5-25
+
+            Swal.fire({
+                title: 'สถานะลานจอดรถ',
+                html: `
+                    <div class="text-center">
+                        <i class="fa-solid fa-car-side fa-3x text-primary mb-3"></i>
+                        <h2 class="text-success fw-bold">${available} / ${total}</h2>
+                        <p class="text-muted">ช่องว่างพร้อมให้บริการ</p>
+                        <div class="progress mt-3" style="height: 10px;">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: ${100 - available}%"></div>
+                            <div class="progress-bar bg-success" role="progressbar" style="width: ${available}%"></div>
+                        </div>
+                        <small class="text-muted mt-2 d-block">แดง = เต็ม | เขียว = ว่าง</small>
+                    </div>
+                `,
+                confirmButtonText: 'ตกลง',
+                confirmButtonColor: '#2e7d32'
+            });
+        }
+
+        function checkInfo() {
+            Swal.fire({
+                title: 'จุดประชาสัมพันธ์ (CA Zone)',
+                text: 'ติดต่อสอบถาม ของหาย หรือแลกคูปอง ได้ที่นี่\nเปิดให้บริการ 16:00 - 22:00 น.',
+                icon: 'info',
+                confirmButtonColor: '#0277bd'
+            });
+        }
+    </script>
+</body>
+
+</html>

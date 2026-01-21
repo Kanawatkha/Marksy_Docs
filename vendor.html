@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คู่มือสำหรับร้านค้า - Marksy</title>
+    <link rel="icon" href="assets/img/Logo_Marksy.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/map-complex.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/Logo_Marksy.png" alt="Marksy Logo" class="brand-logo"
+                    onerror="this.src='https://placehold.co/150x50/2e7d32/white?text=Marksy'">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="text-success"><i class="fa-solid fa-bars fa-lg"></i></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom active" href="vendor.html">คู่มือร้านค้า</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="owner.html">คู่มือเจ้าของ</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="customer.html">คู่มือลูกค้า</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">เกี่ยวกับเรา</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-success text-white py-5 mb-5">
+        <div class="container text-center">
+            <h1 class="font-heading fw-bold">คู่มือการจองพื้นที่สำหรับร้านค้า</h1>
+            <p class="lead opacity-75">เลือกทำเลที่ใช่ จองง่าย จ่ายสะดวก ใน 3 ขั้นตอน</p>
+        </div>
+    </header>
+
+    <div class="container mb-5">
+
+        <div class="row g-5 mb-5">
+            <div class="col-lg-6">
+                <div class="d-flex mb-3">
+                    <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                        style="width:40px; height:40px; min-width:40px;">1</div>
+                    <h4 class="font-heading pt-1">ค้นหาตลาดที่ต้องการ</h4>
+                </div>
+                <p class="text-muted ms-5">
+                    ระบบจะแสดงรายการตลาดพร้อมสถานะ "จำนวนล็อกว่าง" ให้คุณเห็นทันที
+                    สามารถค้นหาจากชื่อตลาด หรือทำเลใกล้เคียงได้
+                </p>
+                <div class="ms-5 bg-light border rounded p-3 text-center text-muted"
+                    style="height: 200px; display:flex; align-items:center; justify-content:center;">
+                    <i class="fa-solid fa-image fa-2x me-2"></i> Screenshot หน้าค้นหา
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="d-flex mb-3">
+                    <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                        style="width:40px; height:40px; min-width:40px;">2</div>
+                    <h4 class="font-heading pt-1">ดูผังตลาดและเลือกจอง</h4>
+                </div>
+                <p class="text-muted ms-5">
+                    Interactive Map ช่วยให้คุณเห็นทำเลจริง แยกโซนชัดเจน (เสื้อผ้า/อาหาร)
+                    <strong class="text-success">สีเขียว = ว่าง</strong> กดจองได้เลย
+                </p>
+                <div class="ms-5 alert alert-success small">
+                    <i class="fa-solid fa-mouse-pointer me-1"></i>
+                    <strong>ลองเล่นด้านล่าง:</strong> เอาเมาส์ชี้ที่ล็อกสีเขียว (Zone M) เพื่อดูราคา
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-0 shadow-lg rounded-4 overflow-hidden mb-5">
+            <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center py-3">
+                <span><i class="fa-solid fa-map me-2"></i> ตัวอย่างผังตลาด (Interactive Map)</span>
+                <span class="badge bg-success">Live Preview</span>
+            </div>
+            <div class="card-body bg-light p-4 overflow-auto">
+
+                <div class="market-map-wrapper">
+
+                    <div class="map-road">ถ.นนทบุรี (สนามบินน้ำ)</div>
+
+                    <div class="market-layout">
+
+                        <div class="top-area">
+                            <div class="block-a29" data-tooltip="A-29: โกดังเก็บของ (ไม่ว่าง)">A-29</div>
+                            <div class="tonsak-1">ลานต้นสัก 1 (ลานกิจกรรม)</div>
+                        </div>
+
+                        <div class="left-column">
+                            <div class="zone-a status-booked" data-tooltip="A-01: ร้านกาแฟโบราณ (ไม่ว่าง)">A-01</div>
+                            <div class="zone-a status-booked" data-tooltip="A-02: ข้าวมันไก่ (ไม่ว่าง)">A-02</div>
+                            <div class="zone-a status-free" data-tooltip="A-03: ว่าง (350 บ.)">A-03</div>
+                            <div class="zone-a status-free" data-tooltip="A-04: ว่าง (350 บ.)">A-04</div>
+                            <div class="zone-a status-booked" data-tooltip="A-05: ร้านยำ (ไม่ว่าง)">A-05</div>
+                        </div>
+
+                        <div class="center-column">
+
+                            <div class="grid-zone-b">
+                                <div class="zone-label">B - ZONE (เสื้อผ้า/แฟชั่น)</div>
+                                <div class="zone-b status-booked">B1</div>
+                                <div class="zone-b status-booked">B2</div>
+                                <div class="zone-b status-booked">B3</div>
+                                <div class="zone-b status-free" data-tooltip="B4: ว่าง (150 บ.)">B4</div>
+                                <div class="zone-b status-free" data-tooltip="B5: ว่าง (150 บ.)">B5</div>
+                                <div class="zone-b status-booked">B6</div>
+                                <div class="zone-b status-booked">B7</div>
+                                <div class="zone-b status-booked">B8</div>
+                                <div class="zone-b status-free" data-tooltip="B9: ว่าง (150 บ.)">B9</div>
+                                <div class="zone-b status-free" data-tooltip="B10: ว่าง (150 บ.)">B10</div>
+                                <div class="zone-b status-booked">B11</div>
+                                <div class="zone-b status-booked">B12</div>
+                            </div>
+
+                            <div class="grid-zone-m">
+                                <div class="zone-m-label">M - ZONE (อาหาร/Food)</div>
+                                <div class="zone-m status-free" data-tooltip="M1: ว่าง (200 บ.)">M1</div>
+                                <div class="zone-m status-free" data-tooltip="M2: ว่าง (200 บ.)">M2</div>
+                                <div class="zone-m status-free" data-tooltip="M3: ว่าง (200 บ.)">M3</div>
+                                <div class="zone-m status-booked">M4</div>
+                                <div class="zone-m status-free" data-tooltip="M5: ว่าง (200 บ.)">M5</div>
+                                <div class="zone-m status-free" data-tooltip="M6: ว่าง (200 บ.)">M6</div>
+                                <div class="zone-m status-booked">M7</div>
+                                <div class="zone-m status-booked">M8</div>
+                                <div class="zone-m status-free" data-tooltip="M9: ว่าง (200 บ.)">M9</div>
+                                <div class="zone-m status-free" data-tooltip="M10: ว่าง (200 บ.)">M10</div>
+                                <div class="zone-m status-free" data-tooltip="M11: ว่าง (200 บ.)">M11</div>
+                                <div class="zone-m status-free" data-tooltip="M12: ว่าง (200 บ.)">M12</div>
+                                <div class="zone-m status-free" data-tooltip="M13: ว่าง (200 บ.)">M13</div>
+                                <div class="zone-m status-free" data-tooltip="M14: ว่าง (200 บ.)">M14</div>
+                                <div class="zone-m status-free" data-tooltip="M15: ว่าง (200 บ.)">M15</div>
+                            </div>
+                        </div>
+
+                        <div class="right-column">
+                            <div class="block-a24" data-tooltip="A-24: โซนดนตรีสด">A-24</div>
+                            <div class="zone-g">G-ZONE</div>
+                            <div class="zone-orange small p-1 text-center text-white rounded">ลานต้นสัก 3</div>
+                        </div>
+
+                        <div class="bottom-row">
+                            <div class="zone-a status-booked">A-07</div>
+                            <div class="zone-a status-booked">A-08</div>
+                            <div class="zone-a status-free" data-tooltip="A-09: ว่าง (300 บ.)">A-09</div>
+                            <div class="zone-a status-booked">A-10</div>
+                            <div class="zone-a status-booked">A-11</div>
+                            <div class="zone-a status-booked">A-12</div>
+                        </div>
+                    </div>
+
+                    <div class="facilities-layer">
+                        <div class="ca-zone">
+                            <h4 class="mb-0">CA</h4>
+                            <small>ZONE</small>
+                        </div>
+                        <div class="parking-lot">
+                            <i class="fa-solid fa-car car-icon"></i>
+                            <span class="text-muted fw-bold">ลานจอดรถ (Parking)</span>
+                            <i class="fa-solid fa-car car-icon"></i>
+                            <i class="fa-solid fa-motorcycle car-icon"></i>
+                        </div>
+                        <div class="office-zone">
+                            <i class="fa-solid fa-building"></i><br>
+                            สนง.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-footer bg-white py-3 text-center">
+                <small class="text-muted d-block mb-2">สถานะสี: <span class="badge bg-success">ว่าง</span> <span
+                        class="badge bg-danger">ไม่ว่าง</span></small>
+                <a href="../marksy-prototype/index.html" target="_blank"
+                    class="btn btn-success btn-lg rounded-pill px-4">
+                    <i class="fa-solid fa-hand-pointer me-2"></i> ลองไปจองของจริงใน Prototype
+                </a>
+            </div>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="d-flex mb-3">
+                    <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                        style="width:40px; height:40px; min-width:40px;">3</div>
+                    <h4 class="font-heading pt-1">ชำระเงินและรออนุมัติ</h4>
+                </div>
+                <p class="text-muted ms-5">
+                    รองรับการชำระผ่าน QR Code พร้อมระบบแนบสลิปในตัว
+                    เมื่อเจ้าของตลาดอนุมัติ สถานะในผังจะเปลี่ยนสีทันที
+                    คุณสามารถตรวจสอบสถานะได้ที่เมนู "ประวัติการจอง"
+                </p>
+            </div>
+            <div class="col-lg-6 order-lg-1 text-center">
+                <div class="bg-light border rounded p-3 d-inline-block"
+                    style="width: 250px; height: 350px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                    <i class="fa-solid fa-qrcode fa-4x mb-3 text-dark"></i>
+                    <span class="text-muted">Payment Screen Mockup</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="bg-light py-4 mt-5 border-top text-center">
+        <div class="container">
+            <p class="mb-0 text-muted small">© 2026 Marksy Project.</p>
+        </div>
+    </footer>
+
+    <a href="../marksy-prototype/index.html" target="_blank" class="floating-cta">
+        <i class="fa-solid fa-mobile-screen-button"></i>
+        <span>ทดลองเล่น Prototype</span>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

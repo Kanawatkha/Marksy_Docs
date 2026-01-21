@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกี่ยวกับเรา - Marksy Team</title>
+    <link rel="icon" href="assets/img/Logo_Marksy.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* Team Card Styling */
+        .team-card {
+            border: none;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(46, 125, 50, 0.15);
+        }
+
+        .team-img-wrapper {
+            width: 120px;
+            height: 120px;
+            margin: 20px auto 10px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #f1f8e9;
+            /* กรอบสีเขียวอ่อน */
+        }
+
+        .team-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .role-badge {
+            font-size: 0.75rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .bg-role-advisor {
+            background-color: #e3f2fd;
+            color: #1565c0;
+        }
+
+        /* ฟ้า */
+        .bg-role-ba {
+            background-color: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        /* ม่วง */
+        .bg-role-dev {
+            background-color: #fff3e0;
+            color: #e65100;
+        }
+
+        /* ส้ม */
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/Logo_Marksy.png" alt="Marksy Logo" class="brand-logo"
+                    onerror="this.src='https://placehold.co/150x50/2e7d32/white?text=Marksy'">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="text-success"><i class="fa-solid fa-bars fa-lg"></i></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="vendor.html">คู่มือร้านค้า</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="owner.html">คู่มือเจ้าของ</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="customer.html">คู่มือลูกค้า</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom active" href="about.html">เกี่ยวกับเรา</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-white py-5 mb-4 text-center">
+        <div class="container">
+            <h1 class="font-heading fw-bold display-5 text-dark">ทีมผู้พัฒนา Marksy</h1>
+            <p class="lead text-muted">เบื้องหลังนวัตกรรม คือความร่วมมือของทีมงานมืออาชีพ</p>
+        </div>
+    </header>
+
+    <div class="container mb-5">
+
+        <div class="mb-5">
+            <div class="d-flex align-items-center mb-4">
+                <div class="bg-primary text-white p-2 rounded me-2"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3 class="font-heading mb-0">ที่ปรึกษาโครงการ</h3>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4 col-sm-6">
+                    <div class="team-card text-center p-4 border-top border-4 border-primary">
+                        <div class="team-img-wrapper">
+                            <img src="assets/img/Advisor_BA.png" alt="Advisor" class="team-img"
+                                onerror="this.src='https://placehold.co/120x120?text=Advisor'">
+                        </div>
+                        <h5 class="fw-bold mb-1">ดร.สมชาย ใจดี</h5>
+                        <span class="role-badge bg-role-advisor">Project Advisor (Business)</span>
+                        <p class="small text-muted mb-0">คณะบริหารธุรกิจ</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="team-card text-center p-4 border-top border-4 border-primary">
+                        <div class="team-img-wrapper">
+                            <img src="assets/img/Advisor_ET.png" alt="Advisor" class="team-img"
+                                onerror="this.src='https://placehold.co/120x120?text=Advisor'">
+                        </div>
+                        <h5 class="fw-bold mb-1">ผศ.ดร.วิศวะ สร้างสรรค์</h5>
+                        <span class="role-badge bg-role-advisor">Project Advisor (Engineering)</span>
+                        <p class="small text-muted mb-0">คณะวิศวกรรมศาสตร์</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5 opacity-25">
+
+        <div class="mb-5">
+            <div class="d-flex align-items-center mb-4">
+                <div class="bg-success text-white p-2 rounded me-2"><i class="fa-solid fa-briefcase"></i></div>
+                <h3 class="font-heading mb-0">ทีมบริหารและวางแผนธุรกิจ (Business Analyst)</h3>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card text-center p-3">
+                        <div class="team-img-wrapper">
+                            <img src="assets/img/ธนพงษ์.png" alt="Team" class="team-img">
+                        </div>
+                        <h5 class="fw-bold mb-1 font-heading">นายธนพงษ์ บาททอง</h5>
+                        <span class="role-badge bg-role-ba">Business & Strategy</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card text-center p-3">
+                        <div class="team-img-wrapper">
+                            <img src="assets/img/จิณณ์กมล.png" alt="Team" class="team-img">
+                        </div>
+                        <h5 class="fw-bold mb-1 font-heading">น.ส.จิณณ์กมล สิงพรามณ์</h5>
+                        <span class="role-badge bg-role-ba">Marketing & Sales</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card text-center p-3">
+                        <div class="team-img-wrapper">
+                            <img src="assets/img/ธนชิต.png" alt="Team" class="team-img">
+                        </div>
+                        <h5 class="fw-bold mb-1 font-heading">นายธนชิต เต้าทอง</h5>
+                        <span class="role-badge bg-role-ba">Finance & Accounting</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card text-center p-3">
+                        <div class="team-img-wrapper">
+                            <img src="assets/img/ชนกันต์.png" alt="Team" class="team-img">
+                        </div>
+                        <h5 class="fw-bold mb-1 font-heading">นายชนกันต์ พลอยประเสริฐ</h5>
+                        <span class="role-badge bg-role-ba">Marketing & Comms.</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card text-center p-3">
+                        <div class="team-img-wrapper">
+                            <img src="assets/img/ปรวัฒน์.png" alt="Team" class="team-img">
+                        </div>
+                        <h5 class="fw-bold mb-1 font-heading">นายปรวัฒน์ สุพิชยา</h5>
+                        <span class="role-badge bg-role-ba">Personal Assistant</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card text-center p-3">
+                        <div class="team-img-wrapper">
+                            <img src="assets/img/ณกานดา.png" alt="Team" class="team-img">
+                        </div>
+                        <h5 class="fw-bold mb-1 font-heading">น.ส.ณกานดา คำหม่น</h5>
+                        <span class="role-badge bg-role-ba">Customer Relationship</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5 opacity-25">
+
+        <div class="mb-5">
+            <div class="d-flex align-items-center mb-4">
+                <div class="bg-warning text-dark p-2 rounded me-2"><i class="fa-solid fa-code"></i></div>
+                <h3 class="font-heading mb-0">ทีมพัฒนาเทคโนโลยี (Developers)</h3>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-5">
+                    <div class="team-card text-center p-4 border-bottom border-4 border-warning">
+                        <div class="team-img-wrapper">
+                            <img src="assets/img/จิรศักดิ์.png" alt="Team" class="team-img">
+                        </div>
+                        <h5 class="fw-bold mb-1 font-heading">นายจิรศักดิ์ แสงธนา</h5>
+                        <span class="role-badge bg-role-dev">Chief Technology Officer (CTO)</span>
+                        <p class="small text-muted">ออกแบบสถาปัตยกรรมระบบและโครงสร้างฐานข้อมูล</p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="team-card text-center p-4 border-bottom border-4 border-warning">
+                        <div class="team-img-wrapper">
+                            <img src="assets/img/กณวรรธน์.png" alt="Team" class="team-img">
+                        </div>
+                        <h5 class="fw-bold mb-1 font-heading">นายกณวรรธน์ คำโท</h5>
+                        <span class="role-badge bg-role-dev">Full Stack Developer</span>
+                        <p class="small text-muted">พัฒนาส่วน Frontend และ Backend ของระบบ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="bg-light py-4 mt-5 border-top text-center">
+        <div class="container">
+            <p class="mb-0 text-muted small">© 2026 Marksy Project.</p>
+        </div>
+    </footer>
+
+    <a href="../marksy-prototype/index.html" target="_blank" class="floating-cta">
+        <i class="fa-solid fa-mobile-screen-button"></i>
+        <span>ทดลองเล่น Prototype</span>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
